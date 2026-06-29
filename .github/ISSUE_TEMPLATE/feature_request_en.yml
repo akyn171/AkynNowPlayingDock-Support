@@ -1,0 +1,65 @@
+name: Feature request (English)
+description: Suggest a new feature or usability improvement
+title: "[Feature Request][EN] "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for your suggestion.
+        You do not need to know how to implement it. Describe what would make the tool easier or better to use.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem are you experiencing?
+      description: Describe what is difficult, inconvenient, or missing.
+      placeholder: The buttons are difficult to use when the Dock is placed in a narrow area of OBS.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: What improvement would you like?
+      description: Describe how you would like the feature or behavior to work.
+      placeholder: The button layout should automatically adjust to the width of the Dock.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Which area should be improved?
+      options:
+        - Dock interface
+        - Track information display
+        - Design settings
+        - YouTube capture
+        - OBS integration
+        - Installation or update
+        - Diagnostics and logs
+        - README and instructions
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Reference images or examples
+      description: Drag and drop images or other reference files into this field.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Include alternative ideas or any detailed preferences.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I checked that a similar Issue has not already been submitted.
+          required: true
