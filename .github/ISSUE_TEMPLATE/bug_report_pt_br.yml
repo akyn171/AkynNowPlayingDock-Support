@@ -1,0 +1,92 @@
+name: Relatório de erro (Português do Brasil)
+description: Relate um problema no Akyn Now Playing Dock
+title: "[Erro][PT-BR] "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por relatar o problema.
+        Antes de enviar, confirme que o relatório não contém informações pessoais.
+
+  - type: input
+    id: version
+    attributes:
+      label: Versão
+      description: Informe a versão exibida na janela de gerenciamento.
+      placeholder: "Exemplo: 1.2.9"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Onde ocorreu o problema?
+      options:
+        - Instalação ou atualização
+        - Reparo
+        - Desinstalação
+        - Inicialização do Dock
+        - Captura do YouTube
+        - Exibição das informações da música
+        - Integração com o OBS
+        - Configurações de design
+        - Sistema de relatório de problemas
+        - Outro
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: O que aconteceu?
+      description: Descreva a mensagem de erro e o que ocorreu.
+      placeholder: A instalação para depois que uma mensagem de erro é exibida.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Passos para reproduzir
+      description: Liste as etapas necessárias para reproduzir o problema.
+      placeholder: |
+        1. Execute o arquivo setup.bat
+        2. Clique em Instalação / Atualização
+        3. Uma mensagem de erro é exibida
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Comportamento esperado
+      description: Descreva o que deveria ter acontecido.
+      placeholder: A instalação deveria terminar e o Dock deveria iniciar.
+    validations:
+      required: true
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Capturas de tela, TXT de diagnóstico e TXT de logs
+      description: |
+        Arraste e solte imagens ou arquivos TXT neste campo.
+        Os arquivos podem ser criados pelos botões "診断TXT" e "報告用ログTXT" na janela de gerenciamento.
+      placeholder: Arraste e solte as imagens ou os arquivos TXT aqui.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Informações adicionais
+      description: Informe a frequência do problema e qualquer configuração alterada antes do erro.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmação
+      options:
+        - label: Confirmei que este relatório não contém informações pessoais.
+          required: true
+        - label: Verifiquei que um Issue semelhante ainda não foi enviado.
+          required: true
