@@ -1,0 +1,90 @@
+name: 不具合報告
+description: Akyn Now Playing Dockで発生した不具合を報告します
+title: "[不具合] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        不具合報告ありがとうございます。
+        個人情報が含まれていないことを確認してから投稿してください。
+
+  - type: input
+    id: version
+    attributes:
+      label: 使用バージョン
+      description: 管理画面に表示されているバージョンを入力してください
+      placeholder: 例：1.2.9
+    validations:
+      required: true
+
+  - type: dropdown
+    id: operation
+    attributes:
+      label: 問題が発生した場所
+      options:
+        - 導入・更新
+        - 修復
+        - 削除
+        - Dock起動
+        - YouTube取得
+        - 曲名表示
+        - OBS連動
+        - デザイン設定
+        - 不具合報告機能
+        - その他
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 発生した問題
+      description: 表示されたエラーや、実際に起きたことを記入してください
+      placeholder: 例：導入・更新を押すとエラーが表示され、処理が止まります
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: 再現手順
+      description: 問題が起きるまでの操作を順番に記入してください
+      placeholder: |
+        1. setup.batを実行
+        2. 導入・更新を押す
+        3. エラーが表示される
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: 本来期待していた動作
+      placeholder: 例：導入が完了し、Dockを起動できる
+    validations:
+      required: true
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: スクリーンショット・診断TXT・報告用ログTXT
+      description: |
+        ファイルをこの入力欄へドラッグ＆ドロップしてください。
+        管理画面の「診断TXT」「報告用ログTXT」から作成できます。
+      placeholder: ここへ画像やTXTファイルをドラッグ＆ドロップしてください
+
+  - type: textarea
+    id: other
+    attributes:
+      label: その他の情報
+      description: 発生頻度や、直前に変更した設定などがあれば記入してください
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 投稿前の確認
+      options:
+        - label: メールアドレス、住所、ユーザー名などの個人情報が含まれていないことを確認しました
+          required: true
+        - label: 同じ内容のIssueがすでに投稿されていないか確認しました
+          required: true
