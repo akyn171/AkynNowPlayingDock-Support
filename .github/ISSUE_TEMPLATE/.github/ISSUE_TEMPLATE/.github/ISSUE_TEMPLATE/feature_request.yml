@@ -1,0 +1,64 @@
+name: 改善提案
+description: 新機能や使いやすさの改善を提案します
+title: "[改善提案] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        改善提案ありがとうございます。
+        実現方法が分からなくても、欲しい機能や困っている点を書くだけで問題ありません。
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: 現在困っていること
+      description: どの操作が使いにくいか、何が不足しているかを記入してください
+      placeholder: 例：OBSの狭いDockへ配置するとボタンが押しにくい
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: 希望する改善内容
+      description: どのようになれば使いやすくなるか記入してください
+      placeholder: 例：Dock幅に合わせてボタン配置が自動で変わってほしい
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: 改善したい場所
+      options:
+        - Dock画面
+        - 曲名表示
+        - デザイン設定
+        - YouTube取得
+        - OBS連動
+        - 導入・更新
+        - 診断・ログ
+        - README・操作説明
+        - その他
+    validations:
+      required: true
+
+  - type: textarea
+    id: example
+    attributes:
+      label: 参考画像・具体例
+      description: 画像や参考資料がある場合は、ここへドラッグ＆ドロップしてください
+
+  - type: textarea
+    id: other
+    attributes:
+      label: 補足
+      description: 代替案や細かい希望があれば記入してください
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: 投稿前の確認
+      options:
+        - label: 同じ内容のIssueがすでに投稿されていないか確認しました
+          required: true
