@@ -1,0 +1,92 @@
+name: Bug report (English)
+description: Report a problem with Akyn Now Playing Dock
+title: "[Bug][EN] "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reporting a problem.
+        Please make sure that your report does not contain personal information before submitting it.
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Enter the version displayed in the management window.
+      placeholder: "Example: 1.2.9"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where did the problem occur?
+      options:
+        - Installation or update
+        - Repair
+        - Uninstallation
+        - Dock startup
+        - YouTube capture
+        - Track information display
+        - OBS integration
+        - Design settings
+        - Issue reporting
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: What happened?
+      description: Describe the error message and what actually happened.
+      placeholder: The installation stops after displaying an error message.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: List the steps that cause the problem.
+      placeholder: |
+        1. Run setup.bat
+        2. Click Installation / Update
+        3. An error message appears
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+      description: Describe what you expected to happen.
+      placeholder: The installation should finish and the Dock should start.
+    validations:
+      required: true
+
+  - type: textarea
+    id: attachments
+    attributes:
+      label: Screenshots, diagnostic TXT and support log TXT
+      description: |
+        Drag and drop screenshots or TXT files into this field.
+        You can create the files using "Diagnostic TXT" and "Support Log TXT" in the management window.
+      placeholder: Drag and drop your images or TXT files here.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional information
+      description: Include how often it happens or any settings you changed before the problem occurred.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmation
+      options:
+        - label: I confirmed that this report does not contain personal information.
+          required: true
+        - label: I checked that a similar Issue has not already been submitted.
+          required: true
