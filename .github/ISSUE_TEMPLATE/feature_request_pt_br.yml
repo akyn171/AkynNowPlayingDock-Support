@@ -1,0 +1,65 @@
+name: Sugestão de melhoria (Português do Brasil)
+description: Sugira uma nova função ou uma melhoria de usabilidade
+title: "[Sugestão][PT-BR] "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado pela sugestão.
+        Não é necessário saber como implementar a ideia. Descreva o que tornaria a ferramenta mais fácil ou melhor de usar.
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Qual problema você está enfrentando?
+      description: Descreva o que é difícil, inconveniente ou está faltando.
+      placeholder: Os botões ficam difíceis de usar quando o Dock é colocado em uma área estreita do OBS.
+    validations:
+      required: true
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: Qual melhoria você gostaria?
+      description: Descreva como a função ou o comportamento deveria funcionar.
+      placeholder: A disposição dos botões deveria se ajustar automaticamente à largura do Dock.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: Qual área deveria ser melhorada?
+      options:
+        - Interface do Dock
+        - Exibição das informações da música
+        - Configurações de design
+        - Captura do YouTube
+        - Integração com o OBS
+        - Instalação ou atualização
+        - Diagnóstico e logs
+        - README e instruções
+        - Outro
+    validations:
+      required: true
+
+  - type: textarea
+    id: examples
+    attributes:
+      label: Imagens de referência ou exemplos
+      description: Arraste e solte imagens ou outros arquivos de referência neste campo.
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Informações adicionais
+      description: Inclua ideias alternativas ou preferências mais detalhadas.
+
+  - type: checkboxes
+    id: confirmation
+    attributes:
+      label: Confirmação
+      options:
+        - label: Verifiquei que um Issue semelhante ainda não foi enviado.
+          required: true
